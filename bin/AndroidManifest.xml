@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.drodyoung.testdemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.drodyoung.testdemo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name=".widget.LabeledSeekBar"
+            android:label="@string/widget_labeled_seek_bar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.drodyoung.testdemo.intent.category.TEST_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name=".app.ActivityLifeCycle"
+            android:label="@string/app_activity_life_cycle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.drodyoung.testdemo.intent.category.TEST_DEMO" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
