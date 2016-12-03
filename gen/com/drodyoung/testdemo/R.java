@@ -8,6 +8,9 @@
 package com.drodyoung.testdemo;
 
 public final class R {
+    public static final class array {
+        public static final int navigation_modes=0x7f050000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -17,27 +20,59 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int ic_settings=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080000;
+        public static final int action_settings=0x7f09000a;
+        public static final int cycle_custom_gravity=0x7f090006;
+        public static final int simple_item=0x7f090009;
+        public static final int toggle_home_as_up=0x7f090000;
+        public static final int toggle_navigation=0x7f090005;
+        public static final int toggle_show_custom=0x7f090004;
+        public static final int toggle_show_home=0x7f090001;
+        public static final int toggle_show_title=0x7f090003;
+        public static final int toggle_system_ui=0x7f090008;
+        public static final int toggle_use_logo=0x7f090002;
+        public static final int toggle_visibility=0x7f090007;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int action_bar_display_options=0x7f030000;
+        public static final int action_bar_display_options_custom=0x7f030001;
+        public static final int activity_main=0x7f030002;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int display_options_actions=0x7f080000;
+        public static final int main=0x7f080001;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_activity_life_cycle=0x7f050004;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
-        public static final int widget_labeled_seek_bar=0x7f050003;
+        public static final int action_settings=0x7f040011;
+        public static final int app_activity_actionbar=0x7f040016;
+        public static final int app_activity_life_cycle=0x7f040015;
+        public static final int app_name=0x7f040010;
+        public static final int cycle_custom_gravity=0x7f04000a;
+        public static final int cycle_custom_gravity_desc=0x7f04000b;
+        public static final int display_options_custom_button=0x7f04000e;
+        public static final int display_options_menu_item=0x7f04000f;
+        public static final int hello_world=0x7f040012;
+        public static final int navigation_mode_list=0x7f040008;
+        public static final int navigation_mode_standard=0x7f040009;
+        public static final int test_action_bar_desc=0x7f040000;
+        public static final int toggle_home_as_up=0x7f040001;
+        public static final int toggle_navigation_mode=0x7f040006;
+        public static final int toggle_navigation_mode_tabs=0x7f040007;
+        public static final int toggle_show_custom=0x7f040005;
+        public static final int toggle_show_home=0x7f040002;
+        public static final int toggle_show_title=0x7f040004;
+        public static final int toggle_system_ui=0x7f04000d;
+        public static final int toggle_use_logo=0x7f040003;
+        public static final int toggle_visibility=0x7f04000c;
+        public static final int widget_labeled_seek_bar=0x7f040013;
+        public static final int widget_labeled_selfOptionMenu=0x7f040014;
     }
     public static final class style {
         /** 
@@ -61,10 +96,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

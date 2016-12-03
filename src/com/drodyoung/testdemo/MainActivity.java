@@ -60,12 +60,12 @@ public class MainActivity extends ListActivity {
             currentIndex = prefix.split("/").length;
         }
         // 2、遍历listActivities列表
+        Map<String, Object> itemMap = new HashMap<String, Object>();
         for (ResolveInfo info : listActivities) {
             if (info == null) {
                 continue;
             }
 
-            Map<String, Object> itemMap = new HashMap<String, Object>();
             // 3、得到activity的label
             CharSequence activityName = info.loadLabel(getPackageManager());
             String label = activityName != null ? activityName.toString() : info.activityInfo.name;
@@ -81,13 +81,14 @@ public class MainActivity extends ListActivity {
                 // 6、是否遍历浏览:当prefi按照“/”拆分长度与label的拆分长度一致，则直接跳转到目标Intent
                 if (currentIndex == labelArray.length - 1) {
                     // 7、将当前要展示的列表Label以及Intent，保存在Map集合中
-                    addItem(itemMap, nextLabel, getTargetIntent(info));
+                    addItem(data, nextLabel, getTargetIntent(info));
                 } else {
-                    String nextPrefix = "".equals(prefix) ? nextLabel : prefix + "/" + nextLabel;
-                    addItem(itemMap, nextLabel, getBroswerIntent(nextPrefix));
+                    String nextKeywords = "".equals(prefix) ? nextLabel : prefix + "/" + nextLabel;
+                    if(itemMap.get(nextKeywords)==null){
+                        itemMap.put(nextKeywords, true);
+                        addItem(data, nextLabel, getBroswerIntent(nextKeywords));
+                    }
                 }
-                // 8、将itemMap数据条目，加入List<Map<String,Object>>中
-                data.add(itemMap);
             }
         }
 
@@ -96,12 +97,12 @@ public class MainActivity extends ListActivity {
         return data;
     }
 
-    private void addItem(Map<String, Object> map, String title, Intent intent) {
-        if (map.get(title) == null) {
-            map.put(title, true);
-            map.put("title", title);
-            map.put("intent", intent);
-        }
+    private void addItem(List<Map<String, Object>> listData, String title, Intent intent) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("title", title);
+        map.put("intent", intent);
+        // 8、将itemMap数据条目，加入List<Map<String,Object>>中
+        listData.add(map);
     }
 
     private Intent getBroswerIntent(String prefix) {

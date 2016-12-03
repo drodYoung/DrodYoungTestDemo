@@ -30,8 +30,25 @@
             </intent-filter>
         </activity>
         <activity 
+            android:name=".widget.SelfOptionMenu"
+            android:label="@string/widget_labeled_selfOptionMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.drodyoung.testdemo.intent.category.TEST_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity 
             android:name=".app.ActivityLifeCycle"
             android:label="@string/app_activity_life_cycle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.drodyoung.testdemo.intent.category.TEST_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:logo="@drawable/ic_settings"
+            android:name=".app.actionbar.ActionBarDisplayOptions"
+            android:label="@string/app_activity_actionbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.drodyoung.testdemo.intent.category.TEST_DEMO" />
