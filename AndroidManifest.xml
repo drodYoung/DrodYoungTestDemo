@@ -54,6 +54,16 @@
                 <category android:name="com.drodyoung.testdemo.intent.category.TEST_DEMO" />
             </intent-filter>
         </activity>
+        
+        <activity 
+            android:logo="@drawable/ic_settings"
+            android:name=".widget.listview.ListViewTest"
+            android:label="@string/widget_listview_test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.drodyoung.testdemo.intent.category.TEST_DEMO" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
