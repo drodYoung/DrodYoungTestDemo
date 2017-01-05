@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="20"
+        android:targetSdkVersion="24" />
 
     <application
         android:allowBackup="true"
@@ -59,6 +59,16 @@
             android:logo="@drawable/ic_settings"
             android:name=".widget.listview.ListViewTest"
             android:label="@string/widget_listview_test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.drodyoung.testdemo.intent.category.TEST_DEMO" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:logo="@drawable/ic_settings"
+            android:name=".summary.BatteryInfo"
+            android:label="@string/summary_battery_info">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.drodyoung.testdemo.intent.category.TEST_DEMO" />

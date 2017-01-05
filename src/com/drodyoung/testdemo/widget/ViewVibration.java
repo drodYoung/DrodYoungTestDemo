@@ -8,6 +8,8 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.view.Menu;
 import android.view.View;
 
+import com.drodyoung.testdemo.R;
+
 public class ViewVibration extends ListActivity {
     public static final String[] TITLES = 
     {
